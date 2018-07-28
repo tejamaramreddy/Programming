@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int i,Alphabets,Digits,Other;
+	i=Alphabets=Digits=Other=0;
+	char str[100];
+	printf("Enter the string : ");
+	gets(str);
+	for(i=0;i<strlen(str);i++)
+	{
+		if(str[i]>='a' && str[i]<='z' || str[i]>='A' && str[i]<='Z')
+		Alphabets++;
+		else if(str[i]>=0 && str[i]<=9)
+		Digits++;
+		else
+		Other++;
+	}
+	printf("%d\n%d\n%d\n",Alphabets,Digits,Other);
+	return 0;
+}

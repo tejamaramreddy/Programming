@@ -1,0 +1,23 @@
+def LetterChanges(str):
+  s = ""
+  final = ""
+  for i in str:
+    if(ord(i)>=97 and ord(i)<123 and i != 'z'):
+      s = s+(chr(ord(i)+1))
+    elif(i == 'z'):
+      s = s+'a' 
+    else:
+      s = s+i
+
+  for j in s:
+    if(j == 'a' or j == 'e'or j == 'i' or j == 'o' or j == 'u' ):
+      final = final+j.upper()
+    else:
+      final = final+j
+
+
+  return final
+    
+
+
+LetterChanges("hello*3")

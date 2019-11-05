@@ -1,0 +1,14 @@
+def LetterCapitalize(str):
+  lst = str.split()
+  result = ""
+  for i in lst:
+    result = result +i.capitalize()+" "
+
+
+  print(result)
+  
+
+  
+
+
+string("hello world")

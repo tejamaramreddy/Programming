@@ -6,10 +6,12 @@ def arrayRotation(arr):
     start += start
     end -= end
 
-  print(arr)
+  
 
 arr = [1, 2, 3, 4, 5, 6, 7]
 #arrayRotation(arr)
 arrayRotation(arr[:2])
 arrayRotation(arr[2:])
 arrayRotation(arr)
+
+print(arr)

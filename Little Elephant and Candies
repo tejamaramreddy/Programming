@@ -1,0 +1,14 @@
+def elephantandcandies(T,C):
+  lst=[]
+  lst1=[]
+  for i in range(T):
+    lst.append(int(input("Enter value")))
+  for i in range(C):
+    lst1.append(int(input("Enter value")))
+  if(sum(lst)>=sum(lst1)):
+    print("Yes")
+  else:
+    print("No")
+T = int(input("Enter number of  elephant: "))
+C = int(input("Enter number of candies: "))
+elephantandcandies(T,C)

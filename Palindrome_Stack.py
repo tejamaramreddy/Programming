@@ -1,21 +1,24 @@
-def Palindrome_Stack(str):
-  lst = []
+def palindrome(str):
   stack = []
-  temp = []
-  for i in str:
-    lst.append(i)
-  mid = len(lst)//2
-  if mid%2 != 0:
-    mid -=1
-  for j in range(mid):
-    stack.append(lst[j])
-  for i in range(mid):
-    temp.append(stack.pop())
-  if temp == lst[mid-1::-1]:
-    print("Palindrome")
-  print(lst[mid-1::-1])
-  print(temp)  
+  output =''
+  mid = len(str)//2
+  temp = mid
+  if len(str) % 2 !=0:
+    mid +=1
 
-Palindrome_Stack('madam')
-
+  for i in range(mid,len(str)):
+    stack.append(str[i])
+  while len(stack) != 0:
+    output += stack.pop()
+  if(output == str[:temp]):
+    print('Palindrome')
+  else:
+    print('Not a palindrome')
   
+  print(output)
+  print(str[:temp])
+  print('\n')
+
+palindrome('madam')
+palindrome('12344321')
+palindrome('aaabcbaaa')

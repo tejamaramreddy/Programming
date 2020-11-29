@@ -1,11 +1,23 @@
 def arrayRotation(arr,d):
-  n = len(arr) 
-  for i in range(d):
-    temp = arr[0]
-    for j in range(n-1):
-      arr[j]=arr[j+1]
-    arr[n-1] = temp
-  print(arr)
+    if len(arr) <= d:
+        d = len(arr) % d
+    if d == 0:
+        return arr
+    temp = [0]*len(arr)
+    j = 0
+    for i in range(d,len(arr)):
+        temp[j] = arr[i]
+        j = j + 1
 
-arr = [1, 2, 3, 4, 5, 6, 7,8]
-arrayRotation(arr,2)
+    for i in range(d):
+        temp[j] = arr[i]
+        j = j + 1
+         
+    print(temp)
+
+
+arr = [1,2,3,4,5,6]
+d = 3
+
+arrayRotation(arr,d)
+        

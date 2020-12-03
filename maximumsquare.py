@@ -12,7 +12,7 @@ max_size = 0
 for i in range(r):
     for j in range(c):
         if(i == 0 or j == 0):
-            print(i,j)
+            #print(i,j)
             table[i][j] = matrix[i][j]
             max_size = table[i][j] if table[i][j] > max_size else max_size
         elif(matrix[i][j] == 0):

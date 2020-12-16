@@ -6,6 +6,8 @@ Output: 17 5 2
 """
 
 def Leader(Arr,N):
+    if N == 0 or N == 1:
+        return Arr
     output = ''
     for i in range(N):
         temp_Arr = Arr[i:]

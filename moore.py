@@ -29,3 +29,5 @@ Arr = [3,1,3,3,2]
 maj_element = majorElement(Arr)
 if(checker(Arr,maj_element)):
     print(maj_element)
+else:
+    print(-1)

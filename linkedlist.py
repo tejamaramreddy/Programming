@@ -33,10 +33,20 @@ class unorderedList:
             count += 1
             temp = temp.getNext()
         return count
+    def search(self,value):
+        current = self.head
+        while current != None:
+            if current.getData() == value:
+                return True
+            else:
+                current = current.getNext()
+        return False
 node1 = unorderedList()
 print(node1.size())
 node1.add(10)
 node1.add(20)
 node1.printList()
 print(node1.size())
+print(node1.search(20))
+print(node1.search(2))
     

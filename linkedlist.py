@@ -41,12 +41,27 @@ class unorderedList:
             else:
                 current = current.getNext()
         return False
+    def remove(self,value):
+        current = self.head
+        previous = None
+        while current != None:
+            if current.getData() == value:
+                break
+            else:
+                previous = current
+                current = current.getNext()
+        if previous == None:
+            self.head = current.getNext()
+        else:
+            previous.setNext(current.getNext())
 node1 = unorderedList()
 print(node1.size())
 node1.add(10)
 node1.add(20)
+node1.add(30)
 node1.printList()
-print(node1.size())
-print(node1.search(20))
-print(node1.search(2))
-    
+# print(node1.size())
+# print(node1.search(20))
+# print(node1.search(2))
+print(node1.remove(20))
+node1.printList()   
